@@ -1,14 +1,12 @@
 # user-agent
 
-Page: `/index.php?page=recover`  
-Difficulty: 3/10
+Page: `/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f`  
+Difficulty: 2/10
 
 ## Description
 
-On the "forgot password" page, there is a form.
-
-The flag is hidden behind it, but no input is visible, and clicking submit returns an error.
+There is a hidden comment in the copyright page telling us to visit with a different browser and coming from a different website.
 
 ## Exploit
 
-In the source code, there is a hidden input text field with an email address (`webmaster@borntosec.com`). Replacing `webmaster` with `admin` and clicking submit gives us the flag.
+We can use `curl` to spoof both of those values.

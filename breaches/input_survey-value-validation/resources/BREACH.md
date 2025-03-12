@@ -1,6 +1,6 @@
 # value-validation
 
-Page: `/index.php?page=survey`
+Page: `/index.php?page=survey`  
 Difficulty: 2/10
 
 ## Description
