@@ -6,6 +6,5 @@ pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
     feroxbuster
     hashcat
-    virtualboxKvm
   ];
 }
