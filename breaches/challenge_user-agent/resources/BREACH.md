@@ -1,7 +1,7 @@
-# not-so-hidden
+# user-agent
 
 Page: `/index.php?page=recover`  
-Difficulty: 1/10
+Difficulty: 3/10
 
 ## Description
 

