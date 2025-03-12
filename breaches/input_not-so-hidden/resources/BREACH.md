@@ -1,6 +1,6 @@
-# no-so-hidden
+# not-so-hidden
 
-Page: `/index.php?page=recover`
+Page: `/index.php?page=recover`  
 Difficulty: 1/10
 
 ## Description
