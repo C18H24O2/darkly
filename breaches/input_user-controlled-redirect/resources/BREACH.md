@@ -1,6 +1,6 @@
-# user-controlled
+# user-controlled-redirect
 
-Page: `/index.php?page=redirect&site=test`
+Page: `/index.php?page=redirect&site=test`  
 Difficulty: 2/10
 
 ## Description
